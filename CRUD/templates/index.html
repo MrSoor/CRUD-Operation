@@ -5,156 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+<link rel="stylesheet" href="/static/css/style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<style>
-
-    body {
-
-        color: #566787;
-
-        background: #f5f5f5;
-
-        font-family: 'Varela Round', sans-serif;
-
-        font-size: 14px;
-
-    }
-
-    .table-wrapper {
-
-        background: #fff;
-
-        padding: 20px 25px;
-
-        margin: 30px 0;
-
-        border-radius: 3px;
-
-        box-shadow: 0 1px 1px rgba(0,0,0,.05);
-
-    }
-
-    .table-title {        
-
-        padding-bottom: 15px;
-
-        background: #007bff; /* Changed to a more vibrant blue */
-
-        color: #fff;
-
-        padding: 16px 30px;
-
-        margin: -20px -25px 10px;
-
-        border-radius: 3px 3px 0 0;
-
-    }
-
-    .table-title h2 {
-
-        margin: 5px 0 0;
-
-        font-size: 24px;
-
-    }
-
-    .table-title .btn {
-
-        color: #fff;
-
-        float: right;
-
-        font-size: 13px;
-
-        border: none;
-
-        min-width: 50px;
-
-        border-radius: 2px;
-
-        outline: none !important;
-
-        margin-left: 10px;
-
-        transition: background 0.3s;
-
-    }
-
-    .table-title .btn:hover {
-
-        background: #0056b3; /* Darker blue on hover */
-
-    }
-
-    table.table tr th, table.table tr td {
-
-        border-color: #e9e9e9;
-
-        padding: 12px 15px;
-
-        vertical-align: middle;
-
-    }
-
-    table.table-striped tbody tr:nth-of-type(odd) {
-
-        background-color: #fcfcfc;
-
-    }
-
-    table.table-striped.table-hover tbody tr:hover {
-
-        background: #f5f5f5;
-
-    }
-
-    table.table td a {
-
-        font-weight: bold;
-
-        color: #007bff; /* Changed to Bootstrap primary color */
-
-        display: inline-block;
-
-        text-decoration: none;
-
-        outline: none !important;
-
-    }
-
-    table.table td a:hover {
-
-        color: #0056b3; /* Darker blue on hover */
-
-    }
-
-    .modal .modal-dialog {
-
-        max-width: 500px; /* Increased modal width */
-
-    }
-
-    .modal .modal-header, .modal .modal-body, .modal .modal-footer {
-
-        padding: 20px 30px;
-
-    }
-
-    .modal .btn {
-
-        border-radius: 2px;
-
-        min-width: 100px;
-
-    }
-
-</style>
 
   <body>
     <div class="container">
@@ -320,30 +177,5 @@
     {% endfor %}
 </body>
 
-<script>
-    $(document).ready(function(){
-        // Activate tooltip
-        $('[data-toggle="tooltip"]').tooltip();
-        
-        // Select/Deselect checkboxes
-        var checkbox = $('table tbody input[type="checkbox"]');
-        $("#selectAll").click(function(){
-            if(this.checked){
-                checkbox.each(function(){
-                    this.checked = true;                        
-                });
-            } else{
-                checkbox.each(function(){
-                    this.checked = false;                        
-                });
-            } 
-        });
-        checkbox.click(function(){
-            if(!this.checked){
-                $("#selectAll").prop("checked", false);
-            }
-        });
-    });
-</script>
-
+<script src="/static/js/script.js"></script>
 </html>
